@@ -4,6 +4,8 @@
 
 #include "Scene.h"
 
+#include "Target.h"
+
 
 class PlayScene : public Scene
 {
@@ -26,7 +28,7 @@ private:
 
 
 	// UI Items
-
+	Target* m_pTarget;
 };
 
 #endif /* defined (__PLAY_SCENE__) */
