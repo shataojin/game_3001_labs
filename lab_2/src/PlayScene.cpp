@@ -21,10 +21,14 @@ void PlayScene::draw()
 {
 	drawDisplayList();
 
-	Util::DrawCircle(m_pTarget->getTransform()->position, m_pTarget->getWidth() * 0.5f);
-
-	Util::DrawCircle(m_pSpaceShip->getTransform()->position, Util::max(m_pSpaceShip->getWidth() * 0.5f, m_pSpaceShip->getHeight() * 0.5f));
-	
+	if (m_bDebugView)
+	{
+		Util::DrawCircle(m_pTarget->getTransform()->position, m_pTarget->getWidth() * 0.5f);
+		if (m_pSpaceShip->isEnabled())
+		{
+			Util::DrawCircle(m_pSpaceShip->getTransform()->position, Util::max(m_pSpaceShip->getWidth() * 0.5f, m_pSpaceShip->getHeight() * 0.5f));
+		}
+	}
 	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 255, 255, 255, 255);
 }
 
@@ -67,7 +71,7 @@ void PlayScene::start()
 {
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
-
+	m_bDebugView = false;
 	m_pTarget = new Target();
 	addChild(m_pTarget);
 	
@@ -80,7 +84,7 @@ void PlayScene::start()
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }
 
-void PlayScene::GUI_Function() const
+void PlayScene::GUI_Function() 
 {
 	// Always open with a NewFrame
 	ImGui::NewFrame();
@@ -90,6 +94,13 @@ void PlayScene::GUI_Function() const
 
 	ImGui::Begin("Your Window Title Goes Here", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
 
+	ImGui::Separator();
+
+	static  bool toggleDebug=false;
+	if(ImGui::Checkbox("Toggle Debug",&toggleDebug))
+	{
+		m_bDebugView = toggleDebug;
+	}
 	ImGui::Separator();
 
 	static float position[2] = { m_pTarget->getTransform()->position.x, m_pTarget->getTransform()->position.y };

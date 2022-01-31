@@ -17,9 +17,9 @@ SpaceShip::SpaceShip()
 	getRigidBody()->isColliding = false;
 
 	// starting motion properties
-	m_maxSpeed = 50.0f; // a maximum number of pixels moved per frame
+	m_maxSpeed = 30.0f; // a maximum number of pixels moved per frame
 	m_turnRate = 5.0f; // a maximum number of degrees to turn each time-step
-	m_accelerationRate = 2.0f; // a maximum number of pixels to add to the velocity each frame
+	m_accelerationRate = 4.0f; // a maximum number of pixels to add to the velocity each frame
 
 	setType(AGENT);
 }
@@ -116,7 +116,9 @@ void SpaceShip::LookWhereYoureGoing(const glm::vec2 target_direction)
 			setCurrentHeading(getCurrentHeading() - getTurnRate());
 		}
 	}
+
 }
+
 
 
 void SpaceShip::m_move()

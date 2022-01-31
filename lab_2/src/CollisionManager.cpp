@@ -261,7 +261,7 @@ bool CollisionManager::lineAABBCheck(Ship* object1, GameObject* object2)
 
 			break;
 		default:
-
+			
 			break;
 		}
 
