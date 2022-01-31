@@ -44,6 +44,9 @@ public:
 	void setVisible(bool state);
 	bool isVisible() const;
 
+	void setIsCentered(bool state);
+	bool isCentered() const;
+
 private:
 	// transform component
 	Transform m_transform;
@@ -58,6 +61,7 @@ private:
 
 	bool m_enabled;
 	bool m_visible;
+	bool m_isCentered;
 };
 
 #endif /* defined (__GAME_OBJECT__) */

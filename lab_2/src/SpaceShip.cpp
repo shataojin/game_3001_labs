@@ -16,12 +16,7 @@ SpaceShip::SpaceShip()
 	getRigidBody()->acceleration = glm::vec2(0, 0);
 	getRigidBody()->isColliding = false;
 
-	// starting motion properties
-	m_maxSpeed = 20.0f; // a maximum number of pixels moved per frame
-	m_turnRate = 5.0f; // a maximum number of degrees to turn each time-step
-	m_accelerationRate = 4.0f; // a maximum number of pixels to add to the velocity each frame
-
-	setType(SPACE_SHIP);
+	setType(AGENT);
 }
 
 SpaceShip::~SpaceShip()
@@ -34,12 +29,12 @@ void SpaceShip::draw()
 	const auto y = getTransform()->position.y;
 
 	// draw the target
-	TextureManager::Instance().draw("space_ship", x, y, getCurrentHeading(), 255, true);
+	TextureManager::Instance().draw("space_ship", x, y, getCurrentHeading(), 255, isCentered());
 }
 
 void SpaceShip::update()
 {
-	m_move();
+
 }
 
 void SpaceShip::clean()
