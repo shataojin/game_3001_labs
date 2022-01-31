@@ -125,7 +125,18 @@ void PlayScene::GUI_Function() const
 	{
 		m_pSpaceShip->setTurnRate(turn_rate);
 	}
-
+	if(ImGui::Button("Reset"))
+	{
+		//reset ship position
+		m_pSpaceShip->getTransform()->position = glm::vec2(100.0f, 400.0f);
+		//reset target position
+		m_pTarget->getTransform()->position = glm::vec2(500.0f, 100.0f);
+		//rest current setting
+		m_pSpaceShip->setCurrentHeading(0.0);
+		m_pSpaceShip->setTargetPosition(m_pTarget->getTransform()->position);
+		m_pSpaceShip->getRigidBody()->velocity = glm::vec2(0, 0);
+		m_pSpaceShip->getRigidBody()->acceleration = m_pSpaceShip->getCurrentDirection() * m_pSpaceShip->getAccelerationRate();
+	}
 	ImGui::End();
 
 }
