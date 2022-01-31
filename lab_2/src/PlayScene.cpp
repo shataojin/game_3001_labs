@@ -21,10 +21,9 @@ void PlayScene::draw()
 {
 	drawDisplayList();
 
-		Util::DrawCircle(m_pTarget->getTransform()->position, m_pTarget->getWidth() * 0.5f);
+	Util::DrawCircle(m_pTarget->getTransform()->position, m_pTarget->getWidth() * 0.5f);
 
-		
-			Util::DrawCircle(m_pSpaceShip->getTransform()->position, Util::max(m_pSpaceShip->getWidth() * 0.5f, m_pSpaceShip->getHeight() * 0.5f));
+	Util::DrawCircle(m_pSpaceShip->getTransform()->position, Util::max(m_pSpaceShip->getWidth() * 0.5f, m_pSpaceShip->getHeight() * 0.5f));
 	
 	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 255, 255, 255, 255);
 }
@@ -73,6 +72,9 @@ void PlayScene::start()
 	addChild(m_pTarget);
 	
 	m_pSpaceShip = new SpaceShip();
+	m_pSpaceShip->setCurrentDirection(glm::vec2(1.0f, 0.0f)); // looking right
+	m_pSpaceShip->setTargetPosition(m_pTarget->getTransform()->position); // where is the target when we start
+	m_pSpaceShip->setEnabled(false);
 	addChild(m_pSpaceShip);
 	
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
@@ -85,7 +87,7 @@ void PlayScene::GUI_Function() const
 
 	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
 	//ImGui::ShowDemoWindow();
-	
+
 	ImGui::Begin("Your Window Title Goes Here", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
 
 	ImGui::Separator();
@@ -94,8 +96,36 @@ void PlayScene::GUI_Function() const
 	if (ImGui::SliderFloat2("Target Position", position, 0.0f, 800.0f))
 	{
 		m_pTarget->getTransform()->position = glm::vec2(position[0], position[1]);
+		m_pSpaceShip->setTargetPosition(m_pTarget->getTransform()->position);
 	}
 
-	
+
+	// spaceship properties
+
+	static bool toggleSeek = false;
+	if (ImGui::Checkbox("Toggle Seek", &toggleSeek))
+	{
+		m_pSpaceShip->setEnabled(toggleSeek);
+	}
+
+	static float speed = m_pSpaceShip->getMaxSpeed();
+	if (ImGui::SliderFloat("Max Speed", &speed, 0.0f, 100.0f))
+	{
+		m_pSpaceShip->setMaxSpeed(speed);
+	}
+
+	static float acceleration_rate = m_pSpaceShip->getAccelerationRate();
+	if (ImGui::SliderFloat("Acceleration Rate", &acceleration_rate, 0.0f, 50.0f))
+	{
+		m_pSpaceShip->setAccelerationRate(acceleration_rate);
+	}
+
+	static float turn_rate = m_pSpaceShip->getTurnRate();
+	if (ImGui::SliderFloat("Turn Rate", &turn_rate, 0.0f, 20.0f))
+	{
+		m_pSpaceShip->setTurnRate(turn_rate);
+	}
+
 	ImGui::End();
+
 }
