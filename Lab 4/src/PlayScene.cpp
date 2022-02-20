@@ -61,13 +61,21 @@ void PlayScene::start()
 {
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
+	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
 
 
 	m_buildGrid();
+
 	m_pTarget = new Target();
+	m_pTarget->getTransform()->position = m_getTile(15, 11)->getTransform()->position + offset;
+	m_pTarget->setGridPosition(15.0f, 11.0f);
+	//m_getTile(15, 11)->setTileStatus(GOAL);
 	addChild(m_pTarget);
 
 	m_pSpaceShip = new SpaceShip();
+	m_pSpaceShip->getTransform()->position = m_getTile(1, 3)->getTransform()->position + offset;
+	m_pSpaceShip->setGridPosition(1.0f, 3.0f);
+	//m_getTile(1, 3)->setTileStatus(START);
 	addChild(m_pSpaceShip);
 
 	/*m_pTile = new Tile();
@@ -142,7 +150,7 @@ void PlayScene::GUI_Function()
 
 	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
 	//ImGui::ShowDemoWindow();
-	
+
 	ImGui::Begin("Lab 4 Debug Properties", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
 
 	ImGui::Separator();
@@ -153,24 +161,57 @@ void PlayScene::GUI_Function()
 		m_isGridEnabled = toggle_grid;
 		m_setGridEnabled(m_isGridEnabled);
 	}
-	
-	ImGui::Separator();
-	// spaceship properties
-	
-	static float start_position[2] = { m_pSpaceShip->getTransform()->position.x, m_pTarget->getTransform()->position.y };
-	if (ImGui::SliderFloat2("Target Position", start_position, 0.0f, 800.0f))
-	{
-		m_pSpaceShip->getTransform()->position = glm::vec2(start_position[0], start_position[1]);
 
+	ImGui::Separator();
+
+	// Heuristic selection
+
+	//static int radio = m_currentHeuristic;
+	//ImGui::Text("Heuristic Type");
+	//ImGui::RadioButton("Manhattan", &radio, MANHATTAN);
+	//ImGui::SameLine();
+	//ImGui::RadioButton("Euclidean", &radio, EUCLIDEAN);
+
+	//// check if current heuristic is not the same as the selection
+	//if (m_currentHeuristic != radio)
+	//{
+	//	m_currentHeuristic = static_cast<Heuristic>(radio);
+	//	m_computeTileCosts();
+	//}
+
+	ImGui::Separator();
+
+	// spaceship properties
+	static int start_position[2] = { m_pSpaceShip->getGridPosition().x, m_pSpaceShip->getGridPosition().y };
+	if (ImGui::SliderInt2("Start Position", start_position, 0, Config::COL_NUM - 1))
+	{
+		// constrain the object within max rows
+		if (start_position[1] > Config::ROW_NUM - 1)
+		{
+			start_position[1] = Config::ROW_NUM - 1;
+		}
+		// converts grid space to world space
+		//m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(UNVISITED);
+		m_pSpaceShip->getTransform()->position = m_getTile(start_position[0], start_position[1])->getTransform()->position + offset;
+		m_pSpaceShip->setGridPosition(start_position[0], start_position[1]); // records the grid position
+		//m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(START);
 	}
 
 	// Target properties
-	
-	static float goal_position[2] = { m_pTarget->getTransform()->position.x, m_pTarget->getTransform()->position.y};
-	if(ImGui::SliderFloat2("Goal Position", goal_position, 0.0f, 800.0f))
+
+	static int goal_position[2] = { m_pTarget->getGridPosition().x, m_pTarget->getGridPosition().y };
+	if (ImGui::SliderInt2("Goal Position", goal_position, 0, Config::COL_NUM - 1))
 	{
-		m_pTarget->getTransform()->position = glm::vec2(goal_position[0], goal_position[1]);
-		
+		// constrain the object within max rows
+		if (goal_position[1] > Config::ROW_NUM - 1)
+		{
+			goal_position[1] = Config::ROW_NUM - 1;
+		}
+		//m_getTile(m_pTarget->getGridPosition())->setTileStatus(UNVISITED);
+		m_pTarget->getTransform()->position = m_getTile(goal_position[0], goal_position[1])->getTransform()->position + offset;
+		m_pTarget->setGridPosition(goal_position[0], goal_position[1]);
+		//m_getTile(m_pTarget->getGridPosition())->setTileStatus(GOAL);
+		//m_computeTileCosts();
 	}
 
 	ImGui::End();
