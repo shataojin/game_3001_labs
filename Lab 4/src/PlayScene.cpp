@@ -216,18 +216,18 @@ void PlayScene::GUI_Function()
 
 	// Heuristic selection
 
-	//static int radio = m_currentHeuristic;
-	//ImGui::Text("Heuristic Type");
-	//ImGui::RadioButton("Manhattan", &radio, MANHATTAN);
-	//ImGui::SameLine();
-	//ImGui::RadioButton("Euclidean", &radio, EUCLIDEAN);
+	static int radio = m_currentHeuristic;
+	ImGui::Text("Heuristic Type");
+	ImGui::RadioButton("Manhattan", &radio, MANHATTAN);
+	ImGui::SameLine();
+	ImGui::RadioButton("Euclidean", &radio, EUCLIDEAN);
 
-	//// check if current heuristic is not the same as the selection
-	//if (m_currentHeuristic != radio)
-	//{
-	//	m_currentHeuristic = static_cast<Heuristic>(radio);
-	//	m_computeTileCosts();
-	//}
+	// check if current heuristic is not the same as the selection
+	if (m_currentHeuristic != radio)
+	{
+		m_currentHeuristic = static_cast<Heuristic>(radio);
+		m_computeTileCosts();
+	}
 
 	ImGui::Separator();
 
