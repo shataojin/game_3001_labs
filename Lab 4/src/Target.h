@@ -2,9 +2,9 @@
 #ifndef __TARGET__
 #define __TARGET__
 
-#include "DisplayObject.h"
+#include "NavigationObject.h"
 
-class Target final : public DisplayObject
+class Target final : public NavigationObject
 {
 public:
 	Target();

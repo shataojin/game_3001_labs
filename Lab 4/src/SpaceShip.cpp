@@ -6,7 +6,7 @@
 
 SpaceShip::SpaceShip()
 {
-	TextureManager::Instance().load("../Assets/textures/ncl.png", "space_ship");
+	TextureManager::Instance().load("../Assets/textures/ncl_small.png", "space_ship");
 
 	const auto size = TextureManager::Instance().getTextureSize("space_ship");
 	setWidth(size.x);
@@ -21,7 +21,7 @@ SpaceShip::SpaceShip()
 	m_maxSpeed = 20.0f; // a maximum number of pixels moved per frame
 	m_turnRate = 5.0f; // a maximum number of degrees to turn each time-step
 	m_accelerationRate = 4.0f; // a maximum number of pixels to add to the velocity each frame
-	
+
 	setType(AGENT);
 }
 
@@ -40,7 +40,7 @@ void SpaceShip::draw()
 
 void SpaceShip::update()
 {
-	m_move();
+	//m_move();
 }
 
 void SpaceShip::clean()
@@ -105,11 +105,11 @@ void SpaceShip::LookWhereYoureGoing(const glm::vec2 target_direction)
 
 	const float turn_sensitivity = 3.0f;
 
-	if(getCollisionWhiskers()[0]) // if left whisker is colliding
+	if (getCollisionWhiskers()[0]) // if left whisker is colliding
 	{
 		target_rotation += getTurnRate() * turn_sensitivity; // turn towards the right
 	}
-	else if(getCollisionWhiskers()[2]) // if right whisker is colliding
+	else if (getCollisionWhiskers()[2]) // if right whisker is colliding
 	{
 		target_rotation -= getTurnRate() * turn_sensitivity; // turn towards the left
 	}
@@ -126,7 +126,7 @@ void SpaceShip::LookWhereYoureGoing(const glm::vec2 target_direction)
 void SpaceShip::m_move()
 {
 	Seek();
-	
+
 	//                                   final Position     position term    velocity term     acceleration term
 	// kinematic equation for motion --> Pf            =      Pi     +     Vi*(time)    +   (0.5)*Ai*(time * time)
 
@@ -140,8 +140,8 @@ void SpaceShip::m_move()
 
 	// compute the acceleration term
 	const glm::vec2 acceleration_term = getRigidBody()->acceleration * 0.5f;// *dt;
-	
-	
+
+
 	// compute the new position
 	glm::vec2 final_position = initial_position + velocity_term + acceleration_term;
 
