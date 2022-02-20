@@ -95,21 +95,71 @@ void PlayScene::start()
 
 void PlayScene::m_buildGrid()
 {
-	auto tileSize = Config::TILE_SIZE;
+	const auto tile_size = Config::TILE_SIZE;
 
-	// add tiles to the grid
+	// lay out a grid of tiles
 	for (int row = 0; row < Config::ROW_NUM; ++row)
 	{
 		for (int col = 0; col < Config::COL_NUM; ++col)
 		{
-			Tile* tile = new Tile(); // create empty tile
-			tile->getTransform()->position = glm::vec2(col * tileSize, row * tileSize);
-			tile->setGridPosition(col, row);
+			Tile* tile = new Tile();
+			tile->getTransform()->position = glm::vec2(col * tile_size, row * tile_size); // world position
+			tile->setGridPosition(col, row); // grid position
 			tile->setParent(this);
 			tile->addLabels();
 			addChild(tile);
-			tile->setLabelsEnabled(true);
+			tile->setEnabled(false);
 			m_pGrid.push_back(tile);
+		}
+	}
+
+	// setup the neighbour references for each tile in the grid
+	// tiles = nodes in our graph
+	for (int row = 0; row < Config::ROW_NUM; ++row)
+	{
+		for (int col = 0; col < Config::COL_NUM; ++col)
+		{
+			Tile* tile = m_getTile(col, row);
+
+			// TopMost Neighbour
+			if (row == 0)
+			{
+				tile->setNeighbourTile(TOP_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(TOP_TILE, m_getTile(col, row - 1));
+			}
+
+			// RightMost Neighbour
+			if (col == Config::COL_NUM - 1)
+			{
+				tile->setNeighbourTile(RIGHT_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(RIGHT_TILE, m_getTile(col + 1, row));
+			}
+
+			// BottomMost Neighbour
+			if (row == Config::ROW_NUM - 1)
+			{
+				tile->setNeighbourTile(BOTTOM_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(BOTTOM_TILE, m_getTile(col, row + 1));
+			}
+
+			// LeftMost Neighbour
+			if (col == 0)
+			{
+				tile->setNeighbourTile(LEFT_TILE, nullptr);
+			}
+			else
+			{
+				tile->setNeighbourTile(LEFT_TILE, m_getTile(col - 1, row));
+			}
 		}
 	}
 }
