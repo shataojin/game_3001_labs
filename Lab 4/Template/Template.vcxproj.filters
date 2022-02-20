@@ -302,6 +302,9 @@
     <ClInclude Include="..\src\Tile.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Heuristic.h">
+      <Filter>Enums</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
