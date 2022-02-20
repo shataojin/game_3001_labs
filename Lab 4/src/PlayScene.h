@@ -45,7 +45,7 @@ private:
 	Tile* m_getTile(int col, int row);
 	Tile* m_getTile(glm::vec2 grid_position);
 
-
+	bool m_bDebugView;
 	// heuristic
 	Heuristic m_currentHeuristic;
 };
