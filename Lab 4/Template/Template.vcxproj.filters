@@ -142,7 +142,7 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Tile.cpp">
-      <Filter>Core</Filter>
+      <Filter>Game Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -300,7 +300,7 @@
       <Filter>Enums</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Tile.h">
-      <Filter>Core</Filter>
+      <Filter>Game Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

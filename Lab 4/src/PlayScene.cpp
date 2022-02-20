@@ -7,6 +7,7 @@
 #include "imgui_sdl.h"
 #include "Renderer.h"
 #include "Util.h"
+#include "Config.h"
 
 PlayScene::PlayScene()
 {
@@ -60,13 +61,21 @@ void PlayScene::start()
 {
 	// Set GUI Title
 	m_guiTitle = "Play Scene";
-	m_bDebugView = false;
 
+
+	m_buildGrid();
 	m_pTarget = new Target();
 	addChild(m_pTarget);
 
 	m_pSpaceShip = new SpaceShip();
 	addChild(m_pSpaceShip);
+
+	/*m_pTile = new Tile();
+	m_pTile->getTransform()->position = glm::vec2(400.0f, 300.0f);
+	m_pTile->setParent(this);
+	m_pTile->addLabels();
+	addChild(m_pTile);
+	m_pTile->setLabelsEnabled(true);*/
 
 
 	// preload sounds
@@ -76,8 +85,58 @@ void PlayScene::start()
 	ImGuiWindowFrame::Instance().setGUIFunction(std::bind(&PlayScene::GUI_Function, this));
 }
 
+void PlayScene::m_buildGrid()
+{
+	auto tileSize = Config::TILE_SIZE;
+
+	// add tiles to the grid
+	for (int row = 0; row < Config::ROW_NUM; ++row)
+	{
+		for (int col = 0; col < Config::COL_NUM; ++col)
+		{
+			Tile* tile = new Tile(); // create empty tile
+			tile->getTransform()->position = glm::vec2(col * tileSize, row * tileSize);
+			tile->setGridPosition(col, row);
+			tile->setParent(this);
+			tile->addLabels();
+			addChild(tile);
+			tile->setLabelsEnabled(true);
+			m_pGrid.push_back(tile);
+		}
+	}
+}
+
+bool PlayScene::m_getGridEnabled() const
+{
+	return m_isGridEnabled;
+}
+
+void PlayScene::m_setGridEnabled(bool state)
+{
+	m_isGridEnabled = state;
+	for (auto tile : m_pGrid) 
+	{
+		tile->setEnabled(m_isGridEnabled);
+		tile->setLabelsEnabled(m_isGridEnabled);
+	}
+}
+
+Tile* PlayScene::m_getTile(const int col, const int row)
+{
+	return m_pGrid[(row * Config::COL_NUM) + col];
+}
+
+Tile* PlayScene::m_getTile(const glm::vec2 grid_position)
+{
+	const auto col = grid_position.x;
+	const auto row = grid_position.y;
+	return m_getTile(col, row);
+}
+
 void PlayScene::GUI_Function()
 {
+	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
+
 	// Always open with a NewFrame
 	ImGui::NewFrame();
 
@@ -88,10 +147,11 @@ void PlayScene::GUI_Function()
 
 	ImGui::Separator();
 
-	static bool toggleDebug = false;
-	if (ImGui::Checkbox("Toggle Debug", &toggleDebug))
+	static bool toggle_grid = false;
+	if (ImGui::Checkbox("Toggle Grid", &toggle_grid))
 	{
-		m_bDebugView = toggleDebug;
+		m_isGridEnabled = toggle_grid;
+		m_setGridEnabled(m_isGridEnabled);
 	}
 	
 	ImGui::Separator();
