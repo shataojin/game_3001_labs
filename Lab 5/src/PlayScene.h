@@ -36,18 +36,37 @@ private:
 	std::vector<Tile*> m_pGrid;
 	bool m_isGridEnabled;
 
+	// Create our Division Scheme (Grid)
 	void m_buildGrid();
 	bool m_getGridEnabled() const;
 	void m_setGridEnabled(bool state);
 	void m_computeTileCosts();
 
+	// Calculate the Shortest Path
+	void m_findShortestPath();
+	void m_displayPathList();
+	void m_resetPathFinding();
+	void m_resetSimulation();
+
+	// tile lists for pathfinding
+	std::vector<Tile*> m_pOpenList;
+	std::vector<Tile*> m_pClosedList;
+	std::vector<Tile*> m_pPathList;
+
 	// convenience functions to convert world to grid space
 	Tile* m_getTile(int col, int row);
 	Tile* m_getTile(glm::vec2 grid_position);
 
-	bool m_bDebugView;
 	// heuristic
 	Heuristic m_currentHeuristic;
+
+	// Ship Movement
+	int m_moveCounter = 0;
+	bool m_shipIsMoving = false;
+	void m_moveShip();
+
+	static int start_position[2];
+	static int goal_position[2];
 };
 
 #endif /* defined (__PLAY_SCENE__) */

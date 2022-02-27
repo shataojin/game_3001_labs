@@ -290,3 +290,6 @@ void PlayScene::GUI_Function()
 }
 
 
+// For reset.
+int PlayScene::start_position[2];
+int PlayScene::goal_position[2];
