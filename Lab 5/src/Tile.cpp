@@ -24,7 +24,7 @@ void Tile::draw()
 		Util::DrawFilledRect(getTransform()->position, getWidth(), getHeight(), glm::vec4(1.0f, 0.5f, 0.5f, 1.0f));
 		break;
 	case OPEN:
-		Util::DrawFilledRect(getTransform()->position, getWidth(), getHeight(), glm::vec4(0.83f, 0.83f, 0.83f, 1.0f));
+		Util::DrawFilledRect(getTransform()->position, getWidth(), getHeight(), glm::vec4(1.0f, 1.0f, 0.83f, 1.0f));
 		break;
 	case CLOSED:
 		Util::DrawFilledRect(getTransform()->position, getWidth(), getHeight(), glm::vec4(0.5f, 0.5f, 0.5f, 1.0f));

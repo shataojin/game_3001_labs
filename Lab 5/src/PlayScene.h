@@ -45,8 +45,7 @@ private:
 	// Calculate the Shortest Path
 	void m_findShortestPath();
 	void m_displayPathList();
-	void m_resetPathFinding();
-	void m_resetSimulation();
+	void m_reset();
 
 	// tile lists for pathfinding
 	std::vector<Tile*> m_pOpenList;

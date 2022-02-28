@@ -299,8 +299,11 @@ void PlayScene::m_displayPathList()
 	std::cout << "Path Length: " << m_pPathList.size() << std::endl;
 }
 
-void PlayScene::m_resetPathFinding()
+
+
+void PlayScene::m_reset()
 {
+	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
 	// clear the tile vectors
 	m_pPathList.clear();
 	m_pPathList.shrink_to_fit();
@@ -314,23 +317,6 @@ void PlayScene::m_resetPathFinding()
 	{
 		tile->setTileStatus(UNVISITED);
 	}
-
-	// reset GOAL and START tiles to where the ship and target are currently located
-	m_getTile(m_pTarget->getGridPosition())->setTileStatus(GOAL);
-	goal_position[0] = m_pTarget->getGridPosition().x;
-	goal_position[1] = m_pTarget->getGridPosition().y;
-	m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(START);
-	start_position[0] = m_pSpaceShip->getGridPosition().x;
-	start_position[1] = m_pSpaceShip->getGridPosition().y;
-
-	m_moveCounter = 0;
-	m_shipIsMoving = false;
-}
-
-void PlayScene::m_resetSimulation()
-{
-	auto offset = glm::vec2(Config::TILE_SIZE * 0.5f, Config::TILE_SIZE * 0.5f);
-	m_resetPathFinding();
 	// clear current status of  ship and target tiles
 	m_getTile(m_pTarget->getGridPosition())->setTileStatus(UNVISITED);
 	m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(UNVISITED);
@@ -346,6 +332,7 @@ void PlayScene::m_resetSimulation()
 	m_getTile(1, 3)->setTileStatus(START);
 	start_position[0] = m_pSpaceShip->getGridPosition().x;
 	start_position[1] = m_pSpaceShip->getGridPosition().y;
+	m_shipIsMoving = false;
 }
 
 void PlayScene::m_moveShip()
@@ -389,7 +376,7 @@ void PlayScene::GUI_Function()
 
 	
 	
-	ImGui::Begin("Lab 4 Debug Properties", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
+	ImGui::Begin("Lab 5 Debug Properties", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
 
 	ImGui::Separator();
 
@@ -433,16 +420,12 @@ void PlayScene::GUI_Function()
 	}
 
 	ImGui::SameLine();
-	if (ImGui::Button("Reset Pathfinding"))
+	if (ImGui::Button("Reset"))
 	{
-		m_resetPathFinding();
+		m_reset();
 	}
 
-	ImGui::SameLine();
-	if (ImGui::Button("Reset Simulation"))
-	{
-		m_resetSimulation();
-	}
+	
 	
 	// spaceship properties
 	start_position[0] = m_pSpaceShip->getGridPosition().x;
@@ -459,7 +442,7 @@ void PlayScene::GUI_Function()
 		m_pSpaceShip->getTransform()->position = m_getTile(start_position[0], start_position[1])->getTransform()->position + offset;
 		m_pSpaceShip->setGridPosition(start_position[0], start_position[1]); // records the grid position
 		m_getTile(m_pSpaceShip->getGridPosition())->setTileStatus(START);
-		m_resetPathFinding();
+		m_reset();
 	}
 
 	// Target properties
@@ -478,7 +461,7 @@ void PlayScene::GUI_Function()
 		m_pTarget->setGridPosition(goal_position[0], goal_position[1]);
 		m_getTile(m_pTarget->getGridPosition())->setTileStatus(GOAL);
 		m_computeTileCosts();
-		m_resetPathFinding();
+		m_reset();
 	}
 	
 	ImGui::End();
