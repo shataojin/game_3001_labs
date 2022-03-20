@@ -31,6 +31,9 @@
     <Filter Include="DOCS">
       <UniqueIdentifier>{a44d29c3-2835-4901-a310-0039121b84b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{dcaf3501-3670-4930-8163-e74fb99d6d65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\StartScene.cpp">
@@ -316,5 +319,10 @@
     <None Include="..\README.md">
       <Filter>DOCS</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Assets\data\obstacles.txt">
+      <Filter>Data</Filter>
+    </Text>
   </ItemGroup>
 </Project>
