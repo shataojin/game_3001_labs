@@ -7,7 +7,8 @@
 #include "Heuristic.h"
 #include "Target.h"
 #include "SpaceShip.h"
-#include "Tile.h"
+#include "Obstacle.h"
+#include "PathNode.h"
 
 class PlayScene : public Scene
 {
@@ -25,48 +26,27 @@ private:
 	// IMGUI Function
 	void GUI_Function();
 	std::string m_guiTitle;
-	
 	glm::vec2 m_mousePosition;
+	bool m_isGridEnabled;
 
 	// Game Objects
 	Target* m_pTarget;
 	SpaceShip* m_pSpaceShip;
+	Obstacle* m_pObstacle1;
+	Obstacle* m_pObstacle2;
+	Obstacle* m_pObstacle3;
+	std::vector<Obstacle*> m_pObstacles;
 
-	// Pathfinding Objects and Functions
-	std::vector<Tile*> m_pGrid;
-	bool m_isGridEnabled;
-
-	// Create our Division Scheme (Grid)
+	// Create our Division Scheme (Grid of PathNodes)
+	std::vector<PathNode*> m_pGrid;
 	void m_buildGrid();
-	bool m_getGridEnabled() const;
-	void m_setGridEnabled(bool state);
-	void m_computeTileCosts();
+	void m_toggleGrid(bool state);
+	void m_checkShipLOS(DisplayObject* target_object) const;
+	void m_storeObstacles();
+	void m_clearNodes();
 
-	// Calculate the Shortest Path
-	void m_findShortestPath();
-	void m_displayPathList();
-	void m_resetPathFinding();
-	void m_resetSimulation();
+	static int m_obstacleBuffer;
 
-	// tile lists for pathfinding
-	std::vector<Tile*> m_pOpenList;
-	std::vector<Tile*> m_pClosedList;
-	std::vector<Tile*> m_pPathList;
-
-	// convenience functions to convert world to grid space
-	Tile* m_getTile(int col, int row);
-	Tile* m_getTile(glm::vec2 grid_position);
-
-	// heuristic
-	Heuristic m_currentHeuristic;
-
-	// Ship Movement
-	int m_moveCounter = 0;
-	bool m_shipIsMoving = false;
-	void m_moveShip();
-
-	static int start_position[2];
-	static int goal_position[2];
 };
 
 #endif /* defined (__PLAY_SCENE__) */
