@@ -36,6 +36,7 @@ public:
 	void setCurrentDirection(glm::vec2 new_direction);
 	void setLOSDistance(float distance);
 	void setHasLOS(bool state);
+	void setHasLOS(bool state, glm::vec4 colour);
 	void setCurrentHeading(float heading);
 	void setLOSColour(glm::vec4 colour);
 
@@ -67,7 +68,7 @@ private:
 	bool m_collisionWhiskers[3]; // change to 5 - keeps track of each Whisker colliding
 
 	float m_whiskerAngle; // angle of the left and right whiskers relative to the heading
-	
+
 };
 
 

@@ -10,7 +10,7 @@ Agent::Agent()
 	m_lineColour[0] = glm::vec4(0, 1, 0, 1); // left line colour
 	m_lineColour[1] = glm::vec4(0, 1, 0, 1); // middle line colour
 	m_lineColour[2] = glm::vec4(0, 1, 0, 1); // right line colour
-	
+
 	// initialize whisker collisions
 	m_collisionWhiskers[0] = false;
 	m_collisionWhiskers[1] = false;
@@ -147,6 +147,12 @@ void Agent::setHasLOS(const bool state)
 {
 	m_hasLOS = state;
 	m_LOSColour = (m_hasLOS) ? glm::vec4(0, 1, 0, 1) : glm::vec4(1, 0, 0, 1);
+}
+
+void Agent::setHasLOS(const bool state, const glm::vec4 colour)
+{
+	m_hasLOS = state;
+	m_LOSColour = (m_hasLOS) ? colour : glm::vec4(1, 0, 0, 1);
 }
 
 void Agent::setCurrentHeading(const float heading)
