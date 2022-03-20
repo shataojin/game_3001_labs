@@ -41,6 +41,9 @@ void SpaceShip::draw()
 
 	// draw the target
 	TextureManager::Instance().draw("space_ship", x, y, getCurrentHeading(), 255, isCentered());
+
+	// draw LOS
+	Util::DrawLine(getTransform()->position, getTransform()->position + getCurrentDirection() * getLOSDistance(), getLOSColour());
 }
 
 void SpaceShip::update()
