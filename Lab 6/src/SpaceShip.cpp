@@ -18,10 +18,15 @@ SpaceShip::SpaceShip()
 	getRigidBody()->isColliding = false;
 
 	// starting motion properties
+	setCurrentHeading(0.0f); // current facing angle
+	setCurrentDirection(glm::vec2(1.0f, 0.0f)); // facing right
 	m_maxSpeed = 20.0f; // a maximum number of pixels moved per frame
 	m_turnRate = 5.0f; // a maximum number of degrees to turn each time-step
 	m_accelerationRate = 4.0f; // a maximum number of pixels to add to the velocity each frame
-	
+
+	setLOSDistance(400.0f); // 5 ppf x 80 feet
+	setLOSColour(glm::vec4(1, 0, 0, 1)); // default LOS colour is red
+
 	setType(AGENT);
 }
 
