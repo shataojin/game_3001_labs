@@ -1,1 +1,659 @@
-﻿LINK : fatal error LNK1168: 无法打开 C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\bin\Debug\Template.exe 进行写入
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_sdl.cpp
+  Agent.cpp
+  Button.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Button.cpp(24,15): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Button.cpp(25,16): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Button.cpp(40,45): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Button.cpp(40,42): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  CollisionManager.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(9,28): warning C4244: “初始化”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(9,21): warning C4244: “初始化”: 从“T”转换到“const int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(10,28): warning C4244: “初始化”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(10,21): warning C4244: “初始化”: 从“T”转换到“const int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(20,72): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(20,24): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(57,41): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(57,22): warning C4244: “初始化”: 从“int”转换到“const float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(58,43): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(58,23): warning C4244: “初始化”: 从“int”转换到“const float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(59,41): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(59,22): warning C4244: “初始化”: 从“int”转换到“const float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(60,43): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(60,23): warning C4244: “初始化”: 从“int”转换到“const float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(226,9): warning C4244: “return”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(235,36): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(235,25): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(237,38): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(237,26): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(240,60): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(240,50): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(266,19): warning C4244: “return”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(273,35): warning C4244: “初始化”: 从“const _Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(273,25): warning C4244: “初始化”: 从“const _Ty”转换到“const int”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(276,19): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(278,20): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(355,38): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(355,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(356,38): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(356,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(385,65): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(385,58): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(395,66): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(395,59): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(401,59): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\CollisionManager.cpp(401,52): warning C4244: “参数”: 从“const int”转换到“float”，可能丢失数据
+  ImGuiWindowFrame.cpp
+  Obstacle.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Obstacle.cpp(12,15): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Obstacle.cpp(13,16): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Obstacle.cpp(29,55): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Obstacle.cpp(29,27): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  Sprite.cpp
+  UIControl.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\UIControl.cpp(33,101): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\UIControl.cpp(33,88): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  DisplayObject.cpp
+  EndScene.cpp
+  FontManager.cpp
+  Game.cpp
+  GameController.cpp
+  GameObject.cpp
+  Label.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(15,15): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(16,16): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(30,51): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(30,48): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(52,15): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(53,16): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(71,15): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Label.cpp(72,16): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  正在生成代码...
+  正在编译...
+  PlayScene.cpp
+  main.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\main.cpp(9,32): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+  Plane.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Plane.cpp(40,6): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Plane.cpp(40,3): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  Player.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(42,7): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(42,4): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(46,7): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(46,4): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(50,7): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(50,4): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(54,7): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Player.cpp(54,4): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  Renderer.cpp
+  Scene.cpp
+  ship.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\ship.cpp(12,15): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\ship.cpp(13,16): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\ship.cpp(40,45): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\ship.cpp(40,42): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\ship.cpp(129,35): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\ship.cpp(129,22): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+  SoundManager.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\SoundManager.cpp(146,27): warning C4244: “初始化”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\SoundManager.cpp(146,20): warning C4244: “初始化”: 从“_Ty”转换到“const int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\SoundManager.cpp(148,28): warning C4244: “初始化”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\SoundManager.cpp(148,21): warning C4244: “初始化”: 从“_Ty”转换到“const int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+  EventManager.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\EventManager.cpp(156,32): warning C4018: “<”: 有符号/无符号不匹配
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\EventManager.cpp(213,37): warning C4244: “=”: 从“Sint32”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\EventManager.cpp(214,37): warning C4244: “=”: 从“Sint32”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  SpriteSheet.cpp
+  StartScene.cpp
+  Target.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Target.cpp(10,15): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Target.cpp(11,16): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Target.cpp(29,47): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Target.cpp(29,44): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  TextureManager.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(135,36): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(135,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(136,37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(136,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(178,36): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(178,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(179,37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(179,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(195,33): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(195,26): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(223,33): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(223,26): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(230,32): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(258,36): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(258,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(259,37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(259,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(288,36): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(288,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(289,37): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(289,21): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(308,11): warning C4244: “=”: 从“int”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\TextureManager.cpp(309,11): warning C4244: “=”: 从“int”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  Util.cpp
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(266,15): warning C4244: “=”: 从“double”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(267,15): warning C4244: “=”: 从“double”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(283,16): warning C4244: “=”: 从“double”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(315,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(316,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(317,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(318,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(321,59): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(321,52): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(321,45): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(321,36): warning C4244: “参数”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(327,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(328,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(329,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(330,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(333,24): warning C4244: “=”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(334,24): warning C4244: “=”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(345,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(346,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(347,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(348,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(351,24): warning C4244: “=”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(352,24): warning C4244: “=”: 从“const T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(370,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(371,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(372,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(373,8): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(376,28): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(376,21): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(390,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(390,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(391,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(391,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(392,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(392,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(393,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(393,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(397,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(397,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(398,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(398,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(399,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(399,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(400,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(400,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(404,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(404,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(405,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(405,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(406,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(406,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(407,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(407,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(411,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(411,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(412,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(412,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(413,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(413,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(414,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(414,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(418,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(418,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(419,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(419,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(420,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(420,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(421,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(421,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(422,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(422,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(423,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(423,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(424,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(424,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(425,57): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(425,43): warning C4244: “参数”: 从“T”转换到“int”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(452,29): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(452,22): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(453,30): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(453,23): warning C4244: “初始化”: 从“float”转换到“const int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(458,23): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(468,22): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\src\Util.cpp(477,19): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+  正在生成代码...
+  Template.vcxproj -> C:\Users\Administrator\Desktop\codes\game_3001_labs\lab_1\week_1\bin\Debug\Template.exe
