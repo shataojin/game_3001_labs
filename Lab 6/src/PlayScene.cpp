@@ -68,19 +68,7 @@ void PlayScene::start()
 	m_pSpaceShip->getTransform()->position = glm::vec2(150.0f, 300.0f);
 	addChild(m_pSpaceShip);
 
-	m_pObstacle1 = new Obstacle();
-	m_pObstacle1->getTransform()->position = glm::vec2(380.0f, 80.0f);
-	m_pObstacle1->setHeight(50);
-	addChild(m_pObstacle1);
-
-	m_pObstacle2 = new Obstacle();
-	m_pObstacle2->getTransform()->position = glm::vec2(380.0f, 280.0f);
-	m_pObstacle2->setWidth(100);
-	addChild(m_pObstacle2);
-
-	m_pObstacle3 = new Obstacle();
-	m_pObstacle3->getTransform()->position = glm::vec2(380.0f, 480.0f);
-	addChild(m_pObstacle3);
+	
 
 	//setup the Grid
 	m_isGridEnabled = false;
@@ -142,33 +130,35 @@ void PlayScene::m_toggleGrid(const bool state)
 	}
 }
 
-void PlayScene::m_checkShipLOS(DisplayObject * target_object) const
+bool PlayScene::m_checkAgentLOS(Agent* agent, DisplayObject* target_object)
 {
-	m_pSpaceShip->setHasLOS(false); // default - no LOS
+	bool has_LOS = false; // default - no LOS
+	agent->setHasLOS(has_LOS);
+	glm::vec4 LOSColour;
 
 	// if ship to target distance is less than or equal to LOS Distance
-	const auto ship_to_target_distance = Util::getClosestEdge(m_pSpaceShip->getTransform()->position, target_object);
-	if (ship_to_target_distance <= m_pSpaceShip->getLOSDistance()) // we are in range
+	const auto AgentToTargetDistance = Util::getClosestEdge(agent->getTransform()->position, target_object);
+	if (AgentToTargetDistance <= agent->getLOSDistance()) // we are in range
 	{
 		std::vector<DisplayObject*> contact_list;
 		for (auto display_object : getDisplayList())
 		{
-			if (display_object->getType() == PATH_NODE) { continue; } // ignore path_nodes
-			if ((display_object->getType() != m_pSpaceShip->getType()) && (display_object->getType() != target_object->getType()))
+			// check if the display_object is closer to the spaceship than the target
+			const auto AgentToObjectDistance = Util::getClosestEdge(agent->getTransform()->position, display_object);
+			if (AgentToObjectDistance > AgentToTargetDistance) continue;
+			if ((display_object->getType() != AGENT) && (display_object->getType() != PATH_NODE) && (display_object->getType() != TARGET))
 			{
-				// check if the display_object is closer to the spaceship than the target
-				const auto ship_to_object_distance = Util::getClosestEdge(m_pSpaceShip->getTransform()->position, display_object);
-				if (ship_to_object_distance <= ship_to_target_distance)
-				{
-					contact_list.push_back(display_object);
-				}
+				contact_list.push_back(display_object);
 			}
 		}
-		const auto has_LOS = CollisionManager::LOSCheck(m_pSpaceShip,
-			m_pSpaceShip->getTransform()->position + m_pSpaceShip->getCurrentDirection() * m_pSpaceShip->getLOSDistance(),
-			contact_list, target_object);
-		m_pSpaceShip->setHasLOS(has_LOS);
+
+		const glm::vec2 agentEndPoint = agent->getTransform()->position + agent->getCurrentDirection() * agent->getLOSDistance();
+		has_LOS = CollisionManager::LOSCheck(agent, agentEndPoint, contact_list, target_object);
+
+		LOSColour = (target_object->getType() == AGENT) ? glm::vec4(0, 0, 1, 1) : glm::vec4(0, 1, 0, 1);
+		agent->setHasLOS(has_LOS, LOSColour);
 	}
+	return has_LOS;
 }
 
 void PlayScene::m_storeObstacles()
