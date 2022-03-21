@@ -12,6 +12,7 @@
 #include "Config.h"
 #include <fstream>
 
+
 PlayScene::PlayScene()
 {
 	PlayScene::start();
@@ -257,7 +258,14 @@ void PlayScene::GUI_Function()
 	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
 	//ImGui::ShowDemoWindow();
 
-	ImGui::Begin("Lab 6 Debug Properties", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
+	ImGui::Begin("Lab 6 Debug ", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
+
+	ImGui::Separator();
+
+	if (ImGui::Button("path from the ship to the target", { 300, 20 }))
+	{
+		
+	}
 
 	ImGui::Separator();
 
